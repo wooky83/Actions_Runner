@@ -1,4 +1,4 @@
 #!/bin/bash -e
 
-TEST= "hello world"
+TEST = "hello world"
 echo "hello world"
