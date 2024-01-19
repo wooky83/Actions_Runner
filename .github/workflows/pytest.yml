@@ -1,0 +1,18 @@
+name: PYTEST
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  pytest:
+    runs-on: [ self-hosted ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test with pytest
+        run: |
+          export PATH="$HOME/.pyenv/shims:$PATH"  # Add pyenv to the execution path
+          pytest python/ 
