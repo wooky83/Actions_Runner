@@ -12,7 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9.8'
+
       - name: Test with pytest
         run: |
-          which pytest
+          pip install pytest
           pytest python/ 
