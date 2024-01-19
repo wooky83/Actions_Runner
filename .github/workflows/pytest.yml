@@ -14,5 +14,5 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pyenv shell 3.9.8
+          export PATH="$HOME/.pyenv/bin:$PATH"  # Add pyenv to the execution path
           pytest python/ 
