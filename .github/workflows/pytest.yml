@@ -14,5 +14,5 @@ jobs:
 
       - name: Test with pytest
         run: |
-          export PATH="$HOME/.pyenv/bin:$PATH"  # Add pyenv to the execution path
+          export PATH="$HOME/.pyenv/shims:$PATH"  # Add pyenv to the execution path
           pytest python/ 
